@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dk78jy5rmf6va"]
+
+[ext_resource type="PackedScene" uid="uid://dbw5ns57t4q6b" path="res://ParkingArea.blend" id="1_bn4as"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1er1q"]
+data = PackedVector3Array(-254.818, -1, 93.1439, -254.818, 1, -29.2175, -254.818, 1, 93.1439, -254.818, -1, 93.1439, -254.818, -1, -29.2175, -254.818, 1, -29.2175, -254.818, -1, -29.2175, 20, 1, -29.2175, -254.818, 1, -29.2175, -254.818, -1, -29.2175, 20, -1, -29.2175, 20, 1, -29.2175, 20, -1, -29.2175, 20, 1, 93.1439, 20, 1, -29.2175, 20, -1, -29.2175, 20, -1, 93.1439, 20, 1, 93.1439, 20, -1, 93.1439, -254.818, 1, 93.1439, 20, 1, 93.1439, 20, -1, 93.1439, -254.818, -1, 93.1439, -254.818, 1, 93.1439, -254.818, -1, -29.2175, 20, -1, 93.1439, 20, -1, -29.2175, -254.818, -1, -29.2175, -254.818, -1, 93.1439, 20, -1, 93.1439, 20, 1, -29.2175, -254.818, 1, 93.1439, -254.818, 1, -29.2175, 20, 1, -29.2175, 20, 1, 93.1439, -254.818, 1, 93.1439)
+
+[node name="ParkingArea" instance=ExtResource("1_bn4as")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Plane" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_1er1q")
